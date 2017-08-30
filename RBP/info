@@ -1,0 +1,46 @@
+[RBP] Profesorka mi je konacno odgovorila na pitanje sta treba da se uci za teorijski deo ispita - ide paste:
+Za zavrsni ispit:
+iz knjige:
+3.6, 4.2-4.5,5, 7.1-7.2, 8, 9
++ prezentacije (slajdovi) - link na stranici predmeta:
+SQLstandardi
++tekst (o standardima) - link na stranici predmeta:
+SQLstandardi-tekst
+G.Pavlovic-Lazetic
+
+Selektujes upit i pritisnes run ili f5 (izvrsava se samo selektovano). Verovatno znas da se upiti zavrsavaju sa ; kako ti ceo kod ne bi pocrveneo. Ako koristis trigere, treba da podesis separator na @ (na primer) kako bi ; mogao da koristis u trigeru između begin atomic i end. Nadam se da je ovo odgovor na tvoje pitanje, kolega
+
+Kada pises upite u skript fajlu, na kraju upita stavis ; da bi mogao da pises sledeci upit, a da studio ne pomisli da je to nastavak tvog prethodnog upita. Kada koristis trigere, ima onaj deo gde pises sta treba da se izvrsi (blok begin atomic ... end) - tu se naredbe zavrsavaju sa ; pa je potrebno zameniti ; na nivou skript fajla sa necim drugim. Drugo resenje je da zakomentarises sve prethodne kodove i samo udaras po Run dugmetu svaki put kad hoćeš da pokreneš poslednji napisani upit.
+
+
+
+Paljenje vmasine:
+Da li je neko imao problem da se konektuje na bazu (ili kako god da se to kaze) na onoj virtualnoj masini? Kad probam connect na MSTUD, prijavi mi nekoliko greski..
+Isao sam na connect u donjem levom uglu na bazu MSTUD, ukucao user student i pass abcdef, i nista.. pomagajte!
+
+
+Prvo terminal pa db2start
+
+
+
+
+Neka knjiga:
+https://lookaside.fbsbx.com/file/2015%20-%2016%20Skripta%20sa%20predavanja.pdf?token=AWxgn02KZYbCBBL4uKL08G7Ms21dbYvRDfg46lMRJO3r2TPU6wtNLy6pOtMLjPkhY0AcaJhof68u3OGKKZ20i0inYIeNDfpTQY86-VGQOd__yIUTGG-c16FgoKcFxUU4cWwbngVv3w9g8Sv5RRtRP5b_Ibg_AGN70BCCMLZPY6pq6oEKyww952pOH7O0qDXkV7k
+
+
+
+
+Povezivanje sa bazom and stuff - ispravite me ako gresim (posto imam gresku i ne mogu da pravim upite u script fajlu):
+1. db2start u terminal
+2. pokrenem Data Studio
+3. izaberem dole-levo bazu MSTUD, idem na connect, user je student, pass je abcdef, port je 50001, prvo test connection pa Ok
+4. sve prodje kako treba, napravim script fajl, povezem ga sa MSTUD bazom (ili jednostavno desni klik na bazu pa napravim skript fajl)
+5. napravim najobicniji upit tipa select * from dosije;
+- izbaci mi sledece:
+"STUDENT.DOSIJE" is an undefined name.. SQLCODE=-204, SQLSTATE=42704, DRIVER=3.68.61
+Script: file:/home/student/Desktop/script4.sql
+Database Name: MSTUD
+Auth. ID (Database): student
+System/IP adress: bla bla bla
+User ID (System): student
+Pomagajte drugoviii
